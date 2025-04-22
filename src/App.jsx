@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let name = Vanya
+  let name = "Vanya"
   const movies = {
     data: {
       description: "Kingsman is a secret spy organization not connected to any government working in the shadows with no rewards and no fame. Arthur (Michael Caine) is the head of the organization. Harry Hart (Colin Firth) is Galahad. He recruits Eggsy (Taron Egerton) who's father once saved his life.",
@@ -17,13 +14,10 @@ function App() {
       url: "https://www.youtube.come",
     }
   }
-  a = 56
-  b = 78
-  suma = a + b
+  let a = 56
+  let b = 78
+  let suma = a + b
   const colors = ["Червоний", "Синій", "Зелений"];
-  const listItems = colors.map((colors) =>
-  <li>{colors}</li>
-);
   return (
     <>
     <h1>{name}</h1>
@@ -31,7 +25,12 @@ function App() {
     <img src={movies.data.img} alt={movies.data.description} />
     <a href={website.web.url}>{website.web.name}</a>
     <p>Сума чисел {a} і {b} = {suma}</p>
-    <ul>{listItems}</ul>
+    {colors.map((color, index) =>(
+      <ul key={index}>
+        <li>{color}</li>
+      </ul>
+    ))} 
+    
     </>
   )
 }
