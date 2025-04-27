@@ -11,7 +11,7 @@ function App() {
   const website = {
     web: {
       name: "YouTube",
-      url: "https://www.youtube.come",
+      url: "https://www.youtube.com",
     }
   }
   let a = 56
